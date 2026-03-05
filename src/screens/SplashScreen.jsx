@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Smile, Send, CheckCircle } from 'lucide-react'
 import { useApp } from '../context/AppContext'
-import { TELEGRAM_LINK } from '../lib/supabase'
+import { TELEGRAM_LINK } from '../supabase'
 
 export default function SplashScreen() {
   const { navigate } = useApp()
