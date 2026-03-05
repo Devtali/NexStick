@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Package, ArrowRight } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../supabase'
 import { useApp } from '../context/AppContext'
 
 const inp = { width:'100%', padding:'0.75rem 1rem', borderRadius:'12px', border:'1.5px solid rgba(255,255,255,0.1)', background:'rgba(255,255,255,0.05)', color:'#fff', fontSize:'0.9rem', outline:'none', boxSizing:'border-box' }
