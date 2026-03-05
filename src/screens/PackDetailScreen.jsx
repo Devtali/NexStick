@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Download, Flag, User } from 'lucide-react'
 import JSZip from 'jszip'
-import { supabase, REACTIONS } from '../lib/supabase'
+import { supabase, REACTIONS } from '../supabase'
 import { useApp } from '../context/AppContext'
 import Header from '../components/Header'
 
