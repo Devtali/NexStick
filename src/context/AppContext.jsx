@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react'
-import { supabase, ADMIN_EMAIL } from '../lib/supabase'
+import { supabase, ADMIN_EMAIL } from '../supabase'
 
 const AppContext = createContext(null)
 
