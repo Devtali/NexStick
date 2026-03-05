@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Save, Trash2 } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../supabase'
 import { useApp } from '../context/AppContext'
 import Header from '../components/Header'
 import StickerCanvas from '../components/StickerCanvas'
