@@ -35,7 +35,7 @@ export default function PackEditorScreen() {
       setStickers(s => [...s, stickerData])
       showToast('Sticker ajouté !')
     } catch(e) {
-      showToast('Erreur lors de l\'ajout', 'error')
+      showToast("Erreur lors de l'ajout", 'error')
       console.error(e)
     }
     setSaving(false)
