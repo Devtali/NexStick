@@ -79,7 +79,7 @@ export default function FeedScreen() {
           <div style={{ display:'flex', justifyContent:'center', padding:'3rem 0' }}><Spinner/></div>
         ) : filtered.length === 0 ? (
           <div style={{ textAlign:'center', padding:'3rem 0', color:'rgba(255,255,255,0.3)', fontFamily:"'DM Sans',sans-serif" }}>
-            {query ? 'Aucun résultat' : 'Aucun pack public pour l\'instant'}<br/>
+            {query ? "Aucun résultat" : "Aucun pack public pour l'instant"}<br/>
             <span style={{ fontSize:'2rem', marginTop:'0.5rem', display:'block' }}>😶</span>
           </div>
         ) : (
