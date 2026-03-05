@@ -36,7 +36,7 @@ export default function CommunityScreen() {
 
   const timeAgo = (ts) => {
     const diff = (Date.now() - new Date(ts)) / 1000
-    if (diff < 60) return 'À l\'instant'
+    if (diff < 60) return "À l'instant"
     if (diff < 3600) return `${Math.floor(diff/60)}min`
     if (diff < 86400) return `${Math.floor(diff/3600)}h`
     return `${Math.floor(diff/86400)}j`
