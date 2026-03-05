@@ -1,6 +1,6 @@
 import { Download, Heart } from 'lucide-react'
 import { useApp } from '../context/AppContext'
-import { REACTIONS } from '../lib/supabase'
+import { REACTIONS } from '../supabase'
 
 export default function PackCard({ pack, onReact, userReaction }) {
   const { navigate, user } = useApp()
