@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Plus, Download, Edit3, Eye, EyeOff, Trash2 } from 'lucide-react'
 import JSZip from 'jszip'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../supabase'
 import { useApp } from '../context/AppContext'
 
 export default function MyPacksScreen() {
