@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Search, Bell } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../supabase'
 import { useApp } from '../context/AppContext'
 import PackCard from '../components/PackCard'
 
