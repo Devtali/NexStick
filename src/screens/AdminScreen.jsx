@@ -88,11 +88,11 @@ export default function AdminScreen() {
         {tab === 'announcements' && (
           <div style={{ display:'flex', flexDirection:'column', gap:'0.75rem' }}>
             <div style={secTitle}><Send size={16} color='#25D366'/> Nouvelle annonce</div>
-            <input value={anno.title} onChange={e=>setAnno(a=>({...a,title:e.target.value}))} placeholder='Titre de l\'annonce *' style={inp}/>
+            <input value={anno.title} onChange={e=>setAnno(a=>({...a,title:e.target.value}))} placeholder="Titre de l'annonce *" style={inp}/>
             <textarea value={anno.content} onChange={e=>setAnno(a=>({...a,content:e.target.value}))} placeholder='Contenu…' rows={4} style={{ ...inp, resize:'none', lineHeight:1.5 }}/>
             <input value={anno.link} onChange={e=>setAnno(a=>({...a,link:e.target.value}))} placeholder='Lien (optionnel)' style={inp}/>
             <button onClick={sendAnnouncement} disabled={sending} style={{ padding:'0.75rem', borderRadius:'12px', border:'none', background:'#25D366', color:'#fff', fontFamily:"'Syne',sans-serif", fontWeight:700, cursor:'pointer', opacity:sending?0.6:1 }}>
-              {sending?'Envoi…':'📢 Publier l\'annonce'}
+              {sending ? "Envoi…" : "📢 Publier l'annonce"}
             </button>
 
             {/* Existing announcements */}
