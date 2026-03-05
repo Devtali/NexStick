@@ -1,7 +1,7 @@
 {
   "name": "stickerforge",
-  "version": "1.0.0",
-  "description": "Créateur de stickers WhatsApp — Nexus Labs",
+  "version": "2.0.0",
+  "description": "Nexus Stickers — Plateforme de création de stickers WhatsApp",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
