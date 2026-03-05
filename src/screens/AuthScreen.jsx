@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Eye, EyeOff, Smile } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase } from '../supabase'
 import { useApp } from '../context/AppContext'
 
 const inp = {
