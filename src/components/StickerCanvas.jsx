@@ -124,7 +124,7 @@ export default function StickerCanvas({ onExport }) {
           <div onClick={()=>fileRef.current?.click()} onDragOver={e=>{e.preventDefault();setDrag(true)}} onDragLeave={()=>setDrag(false)} onDrop={e=>{e.preventDefault();setDrag(false);handleFile(e.dataTransfer.files[0])}}
             style={{ border:`2px dashed ${drag?'#25D366':'rgba(255,255,255,0.12)'}`, borderRadius:'10px', padding:'1rem', textAlign:'center', cursor:'pointer', background:drag?'rgba(37,211,102,0.06)':'transparent' }}>
             <Image size={20} color='rgba(255,255,255,0.3)'/> 
-            <p style={{ margin:'0.3rem 0 0', fontFamily:"'DM Sans',sans-serif", color:'rgba(255,255,255,0.4)', fontSize:'0.78rem' }}>{uploadedImage?'Changer l\'image':'Cliquer ou glisser'}</p>
+            <p style={{ margin:'0.3rem 0 0', fontFamily:"'DM Sans',sans-serif", color:'rgba(255,255,255,0.4)', fontSize:'0.78rem' }}>{uploadedImage ? "Changer l'image" : "Cliquer ou glisser"}</p>
           </div>
           <label style={labelStyle}>Forme</label>
           <div style={{ display:'flex', gap:'0.4rem' }}>
