@@ -5,7 +5,7 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-export const ADMIN_EMAIL = 'nexuslabsword@gmail.com'
+export const ADMIN_EMAIL = 'nexuslabsworld@gmail.com'
 export const TELEGRAM_LINK = 'https://t.me/nexuslabstech'
 
 export const REACTIONS = ['❤️', '😂', '🔥', '👏', '😍', '🤯']
