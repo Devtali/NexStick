@@ -13,6 +13,7 @@ import PackEditorScreen from './screens/PackEditorScreen'
 import CommunityScreen from './screens/CommunityScreen'
 import Navbar from './components/Navbar'
 import Toast from './components/Toast'
+import './index.css'
 
 const MAIN_SCREENS = ['feed', 'create', 'mypacks', 'profile']
 
