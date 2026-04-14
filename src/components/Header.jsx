@@ -1,27 +1,37 @@
 import { ArrowLeft } from 'lucide-react'
 import { useApp } from '../context/AppContext'
+import styles from './Header.module.css'
 
+/**
+ * Header Component
+ * @param {string} title - Titre principal du header
+ * @param {string} [subtitle] - Sous-titre optionnel
+ * @param {string} [backScreen] - Écran de destination du bouton retour (défaut: 'feed')
+ * @param {React.ReactNode} [right] - Contenu à afficher à droite
+ * @param {function} [backFn] - Fonction personnalisée pour le bouton retour
+ */
 export default function Header({ title, subtitle, backScreen, right, backFn }) {
   const { navigate } = useApp()
+  
   const handleBack = backFn || (() => navigate(backScreen || 'feed'))
 
   return (
-    <div style={{
-      padding:'0.85rem 1rem', display:'flex', alignItems:'center', gap:'0.75rem',
-      borderBottom:'1px solid rgba(255,255,255,0.06)', flexShrink:0, background:'#0d1117',
-    }}>
-      <button onClick={handleBack} style={{
-        width:36, height:36, borderRadius:'10px', border:'1px solid rgba(255,255,255,0.1)',
-        background:'rgba(255,255,255,0.05)', color:'#fff', cursor:'pointer',
-        display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0,
-      }}>
-        <ArrowLeft size={16}/>
+    <header className={styles.header}>
+      <button 
+        onClick={handleBack}
+        className={styles.backButton}
+        aria-label="Retour à l'écran précédent"
+        type="button"
+      >
+        <ArrowLeft size={16} aria-hidden="true" />
       </button>
-      <div style={{ flex:1, minWidth:0 }}>
-        <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, color:'#fff', fontSize:'0.95rem', truncate:'ellipsis', overflow:'hidden', whiteSpace:'nowrap' }}>{title}</div>
-        {subtitle && <div style={{ fontFamily:"'DM Sans',sans-serif", color:'rgba(255,255,255,0.35)', fontSize:'0.7rem', letterSpacing:'0.07em', textTransform:'uppercase' }}>{subtitle}</div>}
+      
+      <div className={styles.content}>
+        <h1 className={styles.title}>{title}</h1>
+        {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
       </div>
-      {right && <div>{right}</div>}
-    </div>
+      
+      {right && <div className={styles.rightSection}>{right}</div>}
+    </header>
   )
 }
